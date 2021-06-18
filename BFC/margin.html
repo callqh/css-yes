@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: cadetblue;
+      }
+      div:nth-of-type(2) {
+        background-color: red;
+        /* margin-left: -10px; */
+      }
+      div:nth-of-type(3) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- margin-left/margin-top 如果是负值,那么当前元素会相应的向左或者上方移动 -->
+    <!-- margin-right 如果是负值,右侧元素左移,自身不受影响 -->
+    <!-- margin-bottom 如果是是负值,下侧元素上移,自身不受影响-->
+    <div>上</div>
+    <!-- <div style="background-color: orange; width: 500px">
+      <span style="background-color: chartreuse">中右</span>
+    </div> -->
+    <div style="display: inline-block; margin-right: -10px">中</div>
+
+    <div>下</div>
+  </body>
+</html>

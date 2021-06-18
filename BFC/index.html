@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .clear::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      div::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 触发BFC -->
+    <!-- <div style="overflow: hidden">
+      <p style="border: 1px solid red; margin-bottom: 20px">123</p>
+    </div>
+    <p style="border: 1px solid red; margin-top: 30px">456</p> -->
+    <!-- 清除浮动 -->
+    <div style="border: 1px solid red">
+      <p style="border: 1px solid green; float: left">我要浮动啦</p>
+    </div>
+    <!-- 浮动元素被覆盖 -->
+    <!-- <p style="border: 1px solid green; float: left">我要浮动啦</p>
+    <p style="border: 1px solid black; width: 50px; height: 50px; position: fixed; left: 50px">没人权</p> -->
+  </body>
+</html>

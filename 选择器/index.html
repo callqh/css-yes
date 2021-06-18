@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器</title>
+    <style>
+      section p {
+        color: blue;
+      }
+
+      section > p {
+        background-color: yellow;
+      }
+
+      h2 + p {
+        text-transform: uppercase;
+      }
+
+      h2 ~ p {
+        border: 1px dashed black;
+      }
+      [data-attr='nice'] {
+        font-weight: bolder;
+      }
+      [alt] {
+        font-size: 12px;
+      }
+      [class] {
+        font-size: 32px;
+      }
+      [id] {
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Heading 1</h2>
+      <!--  blue + yellow + uppercase + border-->
+      <p id="no">Paragraph 1</p>
+      <p class="yes">Paragraph 2</p>
+      <div>
+        <h2 class="yes">Heading 2</h2>
+        <!-- blue uppercase border -->
+        <p data-attr="nice">Paragraph 3</p>
+        <!-- blue border -->
+        <p alt="test">Paragraph 4</p>
+      </div>
+    </section>
+  </body>
+</html>

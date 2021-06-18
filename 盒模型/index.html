@@ -15,17 +15,40 @@
         border: 1px solid green;
         background-color: #f10215;
       }
-      p {
+      /* p {
         width: 100px;
         height: 100px;
         padding: 10px;
         border: 1px solid red;
         background-color: blue;
+      } */
+      .pp {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border: 1px solid black;
       }
     </style>
   </head>
   <body>
     <div>怪异盒模型</div>
     <p>标准盒模型</p>
+
+    <!-- 最终margin只剩15: 空白内容的p标签重叠之后相当于被忽略了 -->
+    <p class=".pp">AAA</p>
+    <p class=".pp"></p>
+    <p class=".pp"></p>
+    <p class=".pp"></p>
+    <p class=".pp">BBB</p>
+
+    哈哈哈<span style="padding-top: 10px; border: 1px solid red">行内元素</span
+    >是滴吧就点开辣椒粉拉屎算法课距离父级啊是发打开了尖峰时刻就算法课大姐夫撸框架发首付款辣椒粉的拉法基撒发达金坷垃金粉世家发了是东风科技了舒服就到了撒娇风口浪尖算法的卡链接方式链接发来尖峰时刻
   </body>
+  <script>
+    const d = document.querySelector('div');
+    const p = document.querySelector('p');
+
+    console.log(d.offsetWidth, p.offsetWidth); // padding + width + border
+    console.log(p.style.width); // 只能获取行内样式
+    console.log(getComputedStyle(p)['padding']); // 获取指定样式的宽度,但是是一个带px的字符串
+  </script>
 </html>

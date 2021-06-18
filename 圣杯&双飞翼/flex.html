@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .header,
+      .footer {
+        height: 100px;
+        background-color: green;
+        line-height: 100px;
+        text-align: center;
+      }
+      .main {
+        display: flex;
+        height: 500px;
+      }
+      .middle {
+        order: 2;
+        flex: 1;
+      }
+      .left {
+        order: 1;
+        flex-basis: 100px;
+        background-color: orange;
+      }
+      .right {
+        order: 3;
+        flex-basis: 200px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 上 -->
+    <div class="header">header</div>
+    <!-- 中 -->
+    <div class="main">
+      <div class="middle">middle</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+    <!-- 下 -->
+    <div class="footer">footer</div>
+  </body>
+</html>
